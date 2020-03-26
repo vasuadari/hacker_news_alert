@@ -1,0 +1,8 @@
+%{
+  "castore": {:hex, :castore, "0.1.5", "591c763a637af2cc468a72f006878584bc6c306f8d111ef8ba1d4c10e0684010", [:mix], [], "hexpm", "6db356b2bc6cc22561e051ff545c20ad064af57647e436650aa24d7d06cd941a"},
+  "floki": {:hex, :floki, "0.26.0", "4df88977e2e357c6720e1b650f613444bfb48c5acfc6a0c646ab007d08ad13bf", [:mix], [{:html_entities, "~> 0.5.0", [hex: :html_entities, repo: "hexpm", optional: false]}], "hexpm", "e7b66ce7feef5518a9cd9fc7b52dd62a64028bd9cb6d6ad282a0f0fc90a4ae52"},
+  "html_entities": {:hex, :html_entities, "0.5.1", "1c9715058b42c35a2ab65edc5b36d0ea66dd083767bef6e3edb57870ef556549", [:mix], [], "hexpm", "30efab070904eb897ff05cd52fa61c1025d7f8ef3a9ca250bc4e6513d16c32de"},
+  "mint": {:hex, :mint, "1.0.0", "ca5ab33497ba2bdcc42f6cdd3927420a6159116be87c8173658e93c8746703da", [:mix], [{:castore, "~> 0.1.0", [hex: :castore, repo: "hexpm", optional: true]}], "hexpm", "b8943ef1e630879538dd6620bfc189d4d75fab3ad39f3fe9c50539879f7efd84"},
+  "mojito": {:hex, :mojito, "0.6.3", "1d9af4bee09c5489d189263c4558c1d5b0cc2c2a6d94d2426590077a6b4287ef", [:mix], [{:castore, "~> 0.1", [hex: :castore, repo: "hexpm", optional: false]}, {:mint, "~> 1.0", [hex: :mint, repo: "hexpm", optional: false]}, {:poolboy, "~> 1.5", [hex: :poolboy, repo: "hexpm", optional: false]}], "hexpm", "99c40fe806bfc8bdecdd9b8ac111cc3834ae638afd3e233be554f3ed5811c1f9"},
+  "poolboy": {:hex, :poolboy, "1.5.2", "392b007a1693a64540cead79830443abf5762f5d30cf50bc95cb2c1aaafa006b", [:rebar3], [], "hexpm", "dad79704ce5440f3d5a3681c8590b9dc25d1a561e8f5a9c995281012860901e3"},
+}
