@@ -22,3 +22,7 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 hacker_news_alerts-*.tar
 
+.DS_Store
+
+*.swp
+*.swo
