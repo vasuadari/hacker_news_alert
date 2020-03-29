@@ -3,6 +3,7 @@ defmodule HackerNews.ClientTest do
 
   alias HackerNews.Client
 
+  @tag :pending
   describe "fetch_rss_feed" do
     test "returns rss feed" do
       assert {:ok, "<rss version=" <> _} = Client.fetch_rss_feed()
