@@ -1,0 +1,32 @@
+name: Send Alerts
+
+env:
+  MIX_ENV: prod
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '00 15 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-elixir@v1
+        with:
+          otp-version: 22.3
+          elixir-version: 1.10.2
+
+      - name: Install dependencies
+        run: mix deps.get
+
+      - name: Send hacker news email alerts
+        shell: bash
+        env:
+          GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+        run: mix hacker_news_alert
