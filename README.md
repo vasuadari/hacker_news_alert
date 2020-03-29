@@ -1,5 +1,7 @@
 # Hacker News Alert
 
+![CI](https://github.com/vasuadari/hacker_news_alert/workflows/CI/badge.svg)
+
 Sends email alert for Hacker News.
 
 # Usage
