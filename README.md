@@ -2,6 +2,10 @@
 
 ![CI](https://github.com/vasuadari/hacker_news_alert/workflows/CI/badge.svg)
 
+**Email Preview**
+
+![Hacker News Email](priv/static/email_preview.jpg)
+
 Everyday at 9 AM, 3 PM and 9 PM sends email alert for Hacker News.
 
 # Usage
