@@ -1,0 +1,27 @@
+name: Test send alerts
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-elixir@v1
+        with:
+          otp-version: 22.3
+          elixir-version: 1.10.2
+
+      - name: Install dependencies
+        run: mix deps.get
+
+      - name: compile
+        run: mix compile
+
+      - name: Send hacker news email alerts for Indian time zone
+        shell: bash
+        run: mix hacker_news_alert +5:30
+
+      - name: Send hacker news email alerts for Singapore time zone
+        shell: bash
+        run: mix hacker_news_alert +8:00
