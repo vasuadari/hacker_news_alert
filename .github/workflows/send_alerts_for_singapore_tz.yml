@@ -1,4 +1,4 @@
-name: Send alerts for Indian time zone
+name: Send alerts for Singapore time zone
 
 env:
   MIX_ENV: prod
@@ -6,11 +6,11 @@ env:
 on:
   schedule:
     # Everyday at 9 AM
-    - cron: '30 03 * * *'
+    - cron: '00 01 * * *'
     # Everyday at 3 PM
-    - cron: '30 09 * * *'
+    - cron: '00 07 * * *'
     # Everyday at 9 PM
-    - cron: '30 15 * * *'
+    - cron: '00 13 * * *'
 
 jobs:
   build:
@@ -33,4 +33,4 @@ jobs:
         env:
           GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-        run: mix hacker_news_alert +5:30
+        run: mix hacker_news_alert +8:00
