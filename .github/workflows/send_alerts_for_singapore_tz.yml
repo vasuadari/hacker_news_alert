@@ -4,6 +4,8 @@ env:
   MIX_ENV: prod
 
 on:
+  push:
+    branches: [master]
   schedule:
     # Everyday at 9 AM
     - cron: '00 01 * * *'
@@ -25,12 +27,9 @@ jobs:
       - name: Install dependencies
         run: mix deps.get
 
-      - name: compile
+      - name: Send hacker news email alerts
         shell: bash
         env:
           GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-        run: mix compile
-
-      - name: Send hacker news email alerts
         run: mix hacker_news_alert +8:00
