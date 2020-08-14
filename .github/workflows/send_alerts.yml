@@ -5,10 +5,6 @@ env:
 
 on:
   schedule:
-    # Everyday at 9 AM
-    - cron: '30 03 * * *'
-    # Everyday at 3 PM
-    - cron: '30 09 * * *'
     # Everyday at 9 PM
     - cron: '30 15 * * *'
 

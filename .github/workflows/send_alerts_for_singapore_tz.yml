@@ -7,10 +7,6 @@ on:
   push:
     branches: [master]
   schedule:
-    # Everyday at 9 AM
-    - cron: '00 01 * * *'
-    # Everyday at 3 PM
-    - cron: '00 07 * * *'
     # Everyday at 9 PM
     - cron: '00 13 * * *'
 
